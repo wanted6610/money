@@ -1,13 +1,9 @@
 <template>
-$END$
+  <p>mainPage</p>
 </template>
 
 <script>
 export default {
-name: "loginView"
+  name: 'IndexPage',
 }
 </script>
-
-<style scoped>
-
-</style>
