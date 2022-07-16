@@ -1,10 +1,10 @@
 <template>
-  <p>register</p>
+$END$
 </template>
 
 <script>
 export default {
-  name: "register"
+name: "BaseInput"
 }
 </script>
 
