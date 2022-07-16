@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p :class="color === 'black' ? 'black' : 'white'" class="footer__copy">Money - 2022</p>
+    <p :class="color === 'black' ? 'black' : 'white'" class="footer__copy">MoneySaver - 2022</p>
   </footer>
 </template>
 

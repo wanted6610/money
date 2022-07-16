@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'money',
+    title: 'moneySaver',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ru',
     },
     meta: [
       { charset: 'utf-8' },
@@ -20,13 +20,23 @@ export default {
     ],
   },
 
+  pwa: {
+    icons: {
+      /* icon options */
+      iconFileName: 'icon.png'
+    }
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/reset.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~plugins/veeValidate',
+    '~plugins/globalComponents',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -34,11 +44,14 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/svg-sprite',
+    '@nuxtjs/pwa',
   ],
 
   styleResources: {
     scss: [
-      '~assets/scss/variables.scss'
+      '~assets/scss/variables.scss',
+      '~assets/scss/mixins.scss'
     ]
   },
 
@@ -59,5 +72,9 @@ export default {
 
   router: {
     middleware: ['auth']
-  }
+  },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 }
